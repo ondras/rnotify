@@ -10,8 +10,10 @@
 1. Symlink the `rnotify.service` to your per-user systemd configuration directory (only the local machine):
 
     ```bash
+    cd rnotify
     mkdir -p ~/.config/systemd/user
     ln -s `pwd`/rnotify.service ~/.config/systemd/user
+    systemctl --user daemon-reload
     ```
 
 ## Running
