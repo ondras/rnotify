@@ -46,3 +46,8 @@ Forwarding remote notifications to a local machine
    user@host> ./rnotify-send "This is a remote test"
    ```
    
+## WeeChat integration
+```
+/script install notify_send.pl
+/set plugins.var.perl.notify_send.command "/path/to/rnotify/rnotify-send $type $name $message"
+```
