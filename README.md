@@ -1,4 +1,10 @@
 # rnotify
+Forwarding remote notifications to a local machine
+
+## Prerequisites
+  * netcat
+  * systemd (local machine)
+  * notify-send (local machine)
 
 ## Installation
 1. Clone the repo (all relevant machines):
