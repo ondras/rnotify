@@ -1,5 +1,5 @@
 # rnotify
-Forwarding remote notifications to a local machine
+This is a tiny script that forwards messages to a (local) notification daemon. Client side simply dumps all data to port 1337, server side listens (netcat) and passes received stuff to notify-send. Startup and server reloading is managed via systemd unit file.
 
 ## Prerequisites
   * netcat
