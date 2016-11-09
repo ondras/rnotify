@@ -26,7 +26,7 @@
 1. Test it locally:
 
     ```bash
-    ./rnotify.sh "This is a test"
+    ./rnotify-send "This is a test"
     ```
     
 1. Create a forwarding tunnel to another machine:
@@ -37,6 +37,6 @@
 
 1. Test it remotely:
    ```bash
-   user@host> ./rnotify.sh "This is a remote test"
+   user@host> ./rnotify-send "This is a remote test"
    ```
    
