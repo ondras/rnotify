@@ -1,7 +1,8 @@
 [Unit]
 Description=Remote notification listener
+StartLimitIntervalSec=0
 
 [Service]
 Type=simple
 Restart=always
-ExecStart=/bin/sh -c "notify-send \"Remote notification\" \"$(nc -l -p 1337)\""
+ExecStart=/bin/sh -c "notify-send \"Remote notification\" \"$(nc -l 127.0.0.1 1337)\""
