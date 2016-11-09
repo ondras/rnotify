@@ -4,7 +4,7 @@
 1. Clone the repo (all relevant machines):
 
     ```
-    https://github.com/ondras/rnotify.git
+    git clone https://github.com/ondras/rnotify.git
     ```
 
 1. Symlink the `rnotify.service` to your per-user systemd configuration directory (only the local machine):
