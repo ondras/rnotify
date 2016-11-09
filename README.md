@@ -1,10 +1,16 @@
 # rnotify
+This is a tiny script that forwards messages to a (local) notification daemon. Client side simply dumps all data to port 1337, server side listens (netcat) and passes received stuff to notify-send. Startup and server reloading is managed via systemd unit file.
+
+## Prerequisites
+  * netcat
+  * systemd (local machine)
+  * notify-send (local machine)
 
 ## Installation
 1. Clone the repo (all relevant machines):
 
     ```
-    git clone https://github.com/ondras/rnotify.git
+    git clone git@github.com:ondras/rnotify.git
     ```
 
 1. Symlink the `rnotify.service` to your per-user systemd configuration directory (only the local machine):
@@ -40,3 +46,8 @@
    user@host> ./rnotify-send "This is a remote test"
    ```
    
+## WeeChat integration
+```
+/script install notify_send.pl
+/set plugins.var.perl.notify_send.command "/path/to/rnotify/rnotify-send $type $name $message"
+```
