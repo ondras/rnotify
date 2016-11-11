@@ -1,0 +1,2 @@
+python-dbus
+python-gobject-2
